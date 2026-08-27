@@ -1,0 +1,641 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { scroll-behavior: smooth; }
+body {
+    background-color: #00010a;
+    color: white;
+    background-image: url(https://i.imgur.com/4xK7dzN.jpeg);
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
+}
+body p {
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    color: #cebdac8a;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin: 35px;
+}
+body h2{
+    font-size: 50px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    margin-left: 50px;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #e8c39eaf;
+}
+.subray-h2 {
+  text-decoration: underline;
+  text-decoration-color: #e8c39e79; /* Color de la línea */
+  text-decoration-thickness: 5px;  /* Grosor */
+  text-underline-offset: 12px; /* Espacio entre las letras y la línea */
+}
+body h3{
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #e8c39e70;
+}
+.subray-h3 {
+    text-decoration: underline;
+    text-decoration-color: #e8c39e48;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+/*///////////////////////////////
+HEADER
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/* =========================================
+   HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+  /* Alineamos logo a la izquierda y menú a la derecha */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* Efecto Cristal (Glassmorphism) */
+  background-color: rgba(0, 1, 10, 0.7); /* Oscuro pero levemente transparente */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
+  padding: 8px 50px;
+  
+  /* Esto hace que el menú se quede fijo arriba al hacer scroll */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegura que el menú siempre esté por encima del resto */
+}
+
+/* =========================================
+   IMAGEN DEL LOGO
+   ========================================= */
+.logo-img {
+  width: 30px;       /* Tamaño del avatar */
+  height: 30px;
+  border-radius: 50%; /* Lo hace un círculo perfecto */
+  object-fit: cover;
+  border: 2px solid #facc15; /* Un borde amarillo para resaltar */
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* Efecto de latido al pasar el mouse */
+}
+/* Controla el tamaño de la imagen del logo */
+#inicio img {
+    width: 60px;        /* Define el ancho máximo */
+    height: 60px;       /* Define el alto máximo */
+    border-radius: 50%; /* Hace que la imagen quede en un círculo perfecto */
+    object-fit: cover;  /* Evita que el gatito se estire o se deforme */
+}
+
+/* =========================================
+   ENLACES DEL MENÚ
+   ========================================= */
+header nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative; /* Necesario para la línea de subrayado animada */
+}
+
+/* Efecto hover: Texto se pinta de amarillo */
+header nav ul li a:hover {
+  color: #facc15;
+}
+
+/* Un detalle extra opcional: Subrayado sutil y moderno animado */
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #facc15;
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+/*///////////////////////////////
+BIENVENIDA
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+#bienvenida{
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 2.5px;
+    color:#e8c39e79;
+    background-image: url("https://i.imgur.com/QB6hld7.jpeg");
+    background-size: cover;
+    margin: 0px;
+    padding: 200px;
+}
+.subray-bienvenida {
+  text-decoration: underline;
+  text-decoration-color: #e8c39e79;; /* Color de la línea */
+  text-decoration-thickness: 5px;  /* Grosor */
+  text-underline-offset: 10px; /* Espacio entre las letras y la línea */
+}
+/*///////////////////////////////
+SECCION SOBRE MI
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+#sobre-mi {
+    background-image: url("https://i.imgur.com/dQ6CzcM.jpeg");
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    padding: 0%;
+    
+}
+.sobre-mi-titulo h2 {
+    font-size: 50px;
+    width: 50%;
+    margin-bottom: 4px;
+}
+    .sobre-mi-titulo p {
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    margin-left: 45px;
+    margin-top: 0;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #e8c39e5e;
+}
+.sobre-mi-texto {
+    font-size: 20px;
+    text-align: left;
+    width: 45%;
+}
+/*///////////////////////////////
+SECCION
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* =========================================
+   CONTENEDOR PRINCIPAL Y TARJETAS
+   ========================================= */
+.tablas-grid {
+  display: flex;
+  gap: 32px;               /* Espacio entre cada tarjeta */
+  align-items: flex-start; /* Evita que las tablas se estiren hacia abajo */
+  flex-wrap: wrap;         /* Se adapta a celulares */
+}
+
+/* El efecto de tarjeta transparente para las tres cajas */
+.formacion-materias,
+.formacion-idiomas,
+.formacion-tecnologias {
+  flex: 1; 
+  min-width: 280px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 24px;                               
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+.formacion-materias:hover,
+.formacion-idiomas:hover,
+.formacion-tecnologias:hover {
+  transform: translateY(-5px);
+  border-color: rgba(250, 204, 21, 0.5); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Hacemos que Materias sea un poco más ancha */
+.formacion-materias {
+  flex: 1.4; 
+}
+
+/* Espaciado de los títulos h3 dentro de las tarjetas */
+.tablas-grid h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   ESTILOS DE LAS TABLAS
+   ========================================= */
+
+.tablas-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+th {
+  background-color: rgba(52, 7, 110, 0.6); 
+  color: #facc15;                          
+  font-weight: 700;        
+  font-size: 18px;                         
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid rgba(250, 247, 247, 0.3);
+}
+
+td {
+  font-size: 16px;
+  color: #e2e8f0;                          
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+}
+
+/* Filas de colores intercalados */
+tfoot, tbody tr:nth-child(even) {
+  background-color: #34076e52;
+}
+
+tfoot, tbody tr:nth-child(odd) {
+  background-color: #41c5c554;
+}
+/*///////////////////////////////
+SECCION PROYECTOS
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
+/* =========================================
+   CONTENEDOR DE PROYECTOS (GRID)
+   ========================================= */
+
+.descripcion-seccion {
+  color: #e2e8f0;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.proyectos-grid {
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* =========================================
+   LA TARJETA
+   ========================================= */
+.proyecto-card {
+  background-color: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.1);  
+  backdrop-filter: blur(5px);                 
+  border-radius: 16px; 
+  overflow: hidden; /* Evita que la imagen se salga de los bordes redondeados */
+  display: flex;
+  flex-direction: column; /* Apila imagen arriba y contenido abajo */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de la tarjeta */
+.proyecto-card:hover {
+  transform: translateY(-5px); /* Se levanta un poquito */
+  border-color: rgba(250, 204, 21, 0.5); /* El borde brilla en amarillo */
+}
+
+/* =========================================
+   IMAGEN Y CONTENIDO DE LA TARJETA
+   ========================================= */
+.proyecto-img-interna {
+  width: 100%;
+  height: auto;            /* Deja que la imagen calcule su propia altura natural */
+  max-height: 400px;       /* Pero le ponemos un tope para que no sea inmensa */
+  object-fit: contain;     /* Muestra la imagen entera sin recortes */
+  border-radius: 8px;      
+  margin-bottom: 16px;     
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+
+.proyecto-info {
+  padding: 24px;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa el espacio restante para empujar los botones abajo */
+}
+
+.proyecto-info h3 {
+  margin-top: 0;
+  margin: 16px;
+  color: #facc15;
+  font-size: 22px;
+}
+
+.proyecto-info p {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Empuja el contenedor de botones hacia el fondo */
+}
+
+/* =========================================
+   ETIQUETAS (BADGES)
+   ========================================= */
+.etiquetas {
+  display: flex;
+  gap: 8px;
+  margin: 16px;
+  flex-wrap: wrap;
+}
+
+.etiquetas span {
+  background-color: rgba(52, 7, 110, 0.8);
+  color: #facc15;
+  padding: 4px 12px;
+  border-radius: 20px; /* Forma de píldora */
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.botones {
+  display: flex;
+  gap: 12px;
+}
+
+.botones a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1; /* Hace que los botones compartan el ancho por igual */
+}
+
+/* Botón llamativo */
+.btn-primario {
+  background-color: #facc15;
+  color: #1e293b;
+}
+
+.btn-primario:hover {
+  background-color: #eab308;
+  transform: scale(1.02);
+}
+
+/* Botón secundario (sólo contorno) */
+.btn-secundario {
+  background-color: transparent;
+  color: #facc15;
+  border: 1px solid #facc15;
+}
+
+.btn-secundario:hover {
+  background-color: rgba(250, 204, 21, 0.1);
+}
+/*///////////////////////////////
+SECCION FORMULARIO
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* =========================================
+   CONTENEDOR DEL FORMULARIO
+   ========================================= */
+.formulario-cristal {
+  background-color: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.1);  
+  backdrop-filter: blur(10px);                 
+  border-radius: 16px; 
+  padding: 50px;
+  max-width: 700px;  /* Evita que el formulario sea inmensamente ancho en PC */
+  margin: 0 auto;    /* Centra el formulario en la pantalla */
+  color: #e2e8f0;
+}
+
+/* =========================================
+   FIELDSETS Y LEYENDAS
+   ========================================= */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+legend {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #facc15; /* Amarillo brillante */
+  margin-bottom: 16px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.nota-obligatoria, .nota-obligatoria span {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.nota-obligatoria span, label span {
+  color: #ef4444; /* Rojo para los asteriscos de obligatorio */
+}
+
+/* =========================================
+   ESTRUCTURA (FLEXBOX PARA EL FORMULARIO)
+   ========================================= */
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-fila {
+  display: flex;
+  gap: 60px;
+}
+
+.form-fila .form-grupo {
+  flex: 1; /* Hacen que ambos campos compartan la mitad del ancho */
+}
+
+label, .etiqueta-falsa {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   INPUTS, SELECTS Y TEXTAREA
+   ========================================= */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* Fondo más oscuro para la caja de texto */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic en el campo para escribir */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #facc15; /* Borde amarillo */
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.3); /* Resplandor amarillo */
+}
+/* =========================================
+   OPCIONES DEL MENÚ DESPLEGABLE (SELECT)
+   ========================================= */
+select option {
+  background-color: #1e293b; /* Un fondo azul/gris oscuro sólido */
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 12px;             /* Le da un poco de respiro al texto */
+}
+
+/* Evita que el usuario estire el textarea horizontalmente y rompa el diseño */
+textarea {
+  resize: vertical; 
+}
+/* =========================================
+   RADIOS Y CHECKBOXES
+   ========================================= */
+.form-grupo-opciones {
+  margin-bottom: 20px;
+}
+
+.form-grupo-opciones label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Truco moderno para pintar los checkbox/radios del color de tu diseño */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #facc15; 
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* =========================================
+   BOTONES DEL FORMULARIO
+   ========================================= */
+.form-botones {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Reutilizamos los estilos de botones, adaptados al formulario */
+.form-botones button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/*///////////////////////////////
+FOOTER (PIE DE PAGINA)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.pie-pagina {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil arriba */
+  background-color: rgba(0, 0, 0, 0.3);           /* Fondo oscurecido para dar cierre */
+  padding: 40px 20px 20px;
+  margin-top: 80px;                               /* Empuja el footer hacia abajo, separándolo del formulario */
+  color: #94a3b8;                                 /* Un gris/celeste apagado para que no robe atención */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Flexbox para separar texto a la izquierda y redes a la derecha */
+.footer-contenido {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-wrap: wrap; /* Si la pantalla es chica (celular), las redes bajan ordenadamente */
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido */
+  gap: 32px;
+}
+
+/* Estilos de los textos */
+.footer-texto p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.footer-nombre {
+  color: #e2e8f0; /* El nombre resalta un poco más en blanco */
+  font-size: 20px !important;
+  font-weight: 700;
+}
+
+/* =========================================
+   LISTA DE REDES SOCIALES
+   ========================================= */
+.footer-redes {
+  list-style: none; /* Quita las viñetas/puntos de la lista */
+  padding: 0;
+  display: flex;
+  gap: 24px; /* Separación horizontal entre cada enlace */
+  flex-wrap: wrap;
+}
+
+.footer-redes a {
+  text-decoration: none; /* Quita el subrayado feo de los enlaces */
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 28px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Efecto al pasar el mouse por los enlaces */
+.footer-redes a:hover {
+  color: #facc15; /* Se pintan de tu color amarillo */
+  transform: translateY(-3px); /* Saltan un poquito hacia arriba */
+}
+
+/* =========================================
+   COPYRIGHT
+   ========================================= */
+.footer-copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea extra fina de separación */
+  padding-top: 20px;
+}
