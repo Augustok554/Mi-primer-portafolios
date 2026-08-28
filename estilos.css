@@ -40,6 +40,7 @@ body h3{
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     margin-left: 10px;
+    margin-bottom: 25px;
     font-style: normal;
     letter-spacing: 2px;
     color: #e8c39e70;
@@ -63,7 +64,6 @@ header {
   justify-content: space-between;
   align-items: center;
   
-  /* Efecto Cristal (Glassmorphism) */
   background-color: rgba(0, 1, 10, 0.7); /* Oscuro pero levemente transparente */
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -96,7 +96,7 @@ header {
     width: 60px;        /* Define el ancho máximo */
     height: 60px;       /* Define el alto máximo */
     border-radius: 50%; /* Hace que la imagen quede en un círculo perfecto */
-    object-fit: cover;  /* Evita que el gatito se estire o se deforme */
+    object-fit: cover;
 }
 
 /* =========================================
@@ -136,6 +136,10 @@ header nav ul li a::after {
 
 header nav ul li a:hover::after {
   width: 100%;
+}
+h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 /*///////////////////////////////
 BIENVENIDA
@@ -317,9 +321,9 @@ SECCION PROYECTOS
    ========================================= */
 .proyecto-img-interna {
   width: 100%;
-  height: auto;            /* Deja que la imagen calcule su propia altura natural */
-  max-height: 400px;       /* Pero le ponemos un tope para que no sea inmensa */
-  object-fit: contain;     /* Muestra la imagen entera sin recortes */
+  height: auto;         
+  max-height: 400px;       
+  object-fit: contain;     
   border-radius: 8px;      
   margin-bottom: 16px;     
   border: 1px solid rgba(255, 255, 255, 0.1); 
@@ -638,4 +642,81 @@ FOOTER (PIE DE PAGINA)
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea extra fina de separación */
   padding-top: 20px;
+}
+
+/* /////////////////////////////////
+CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media (max-width: 768px) {
+  
+  /* 1. HEADER Y NAVEGACIÓN */
+  header {
+    flex-direction: column; /* Apilamos el logo arriba y los links abajo */
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  header nav ul {
+    gap: 15px; /* Acercamos los links */
+    flex-wrap: wrap; /* Permite que bajen de renglón si no entran */
+    justify-content: center; /* Los centramos */
+  }
+
+  /* 2. TÍTULOS GENERALES Y PÁRRAFOS */
+  body h2 {
+    font-size: 35px; /* Achicamos los h2 generales */
+    margin-left: 20px; /* Reducimos el margen para ganar espacio */
+  }
+  
+  body p {
+    margin: 20px 15px; /* Párrafos con menos margen lateral */
+  }
+
+  /* 3. SECCIÓN BIENVENIDA */
+  #bienvenida {
+    font-size: 40px; /* Letra más adaptable al móvil */
+    padding: 100px 20px; /* Reducimos el padding gigante de 200px */
+  }
+
+  /* 4. SECCIÓN SOBRE MÍ */
+  .sobre-mi-titulo h2,
+  .sobre-mi-texto {
+    width: 100%; /* Forzamos a que usen todo el ancho de la pantalla */
+    margin-left: 0;
+    text-align: center; /* Centramos para que se vea más prolijo */
+  }
+  
+  .sobre-mi-titulo p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* 5. FORMULARIO */
+  .formulario-cristal {
+    padding: 25px 15px; /* Menos espacio interno */
+    margin: 15px; /* Un poco de margen exterior para que no toque la orilla */
+  }
+  
+  .form-fila {
+    flex-direction: column; /* Apilamos "Teléfono" y "País" */
+    gap: 20px; /* Reducimos el hueco de 60px */
+  }
+  
+  .form-botones {
+    flex-direction: column; /* Apilamos los botones */
+  }
+  
+  .form-botones button {
+    width: 100%; /* Botones anchos para tocar cómodamente con el dedo */
+  }
+
+  /* 6. FOOTER */
+  .footer-contenido {
+    flex-direction: column; /* Apilamos textos y redes */
+    text-align: center;
+  }
+  
+  .footer-redes {
+    justify-content: center; /* Centramos los íconos de las redes */
+  }
 }
