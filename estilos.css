@@ -64,13 +64,12 @@ header {
   justify-content: space-between;
   align-items: center;
   
-  background-color: rgba(0, 1, 10, 0.7); /* Oscuro pero levemente transparente */
+  background-color: rgba(0, 1, 10, 0.7); 
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   
   padding: 8px 50px;
   
-  /* Esto hace que el menú se quede fijo arriba al hacer scroll */
   position: sticky;
   top: 0;
   z-index: 1000; /* Asegura que el menú siempre esté por encima del resto */
@@ -82,20 +81,20 @@ header {
 .logo-img {
   width: 30px;       /* Tamaño del avatar */
   height: 30px;
-  border-radius: 50%; /* Lo hace un círculo perfecto */
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid #facc15; /* Un borde amarillo para resaltar */
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1); /* Efecto de latido al pasar el mouse */
+  transform: scale(1.1);
 }
-/* Controla el tamaño de la imagen del logo */
+/*Imagen */
 #inicio img {
-    width: 60px;        /* Define el ancho máximo */
-    height: 60px;       /* Define el alto máximo */
-    border-radius: 50%; /* Hace que la imagen quede en un círculo perfecto */
+    width: 60px;       
+    height: 60px;       
+    border-radius: 50%; 
     object-fit: cover;
 }
 
@@ -114,15 +113,14 @@ header nav ul li a {
   font-weight: 600;
   font-size: 16px;
   transition: color 0.3s ease;
-  position: relative; /* Necesario para la línea de subrayado animada */
+  position: relative;
 }
 
-/* Efecto hover: Texto se pinta de amarillo */
 header nav ul li a:hover {
   color: #facc15;
 }
 
-/* Un detalle extra opcional: Subrayado sutil y moderno animado */
+/* Subrayado sutil y animado */
 header nav ul li a::after {
   content: '';
   position: absolute;
@@ -208,11 +206,11 @@ SECCION
   flex-wrap: wrap;         /* Se adapta a celulares */
 }
 
-/* El efecto de tarjeta transparente para las tres cajas */
+/* El efecto de tarjeta */
 .formacion-materias,
 .formacion-idiomas,
 .formacion-tecnologias {
-  flex: 1; 
+  flex: 1; /*Crecer lo más que pueda, y sí hay otro elemento similar, distribuirse */
   min-width: 280px;
   background-color: rgba(255, 255, 255, 0.03);
   padding: 24px;                               
@@ -270,7 +268,6 @@ td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
 }
 
-/* Filas de colores intercalados */
 tfoot, tbody tr:nth-child(even) {
   background-color: #34076e52;
 }
@@ -543,7 +540,7 @@ textarea {
   cursor: pointer;
 }
 
-/* Truco moderno para pintar los checkbox/radios del color de tu diseño */
+/* Pintar los checkbox/radios del color de tu diseño */
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: #facc15; 
@@ -578,10 +575,10 @@ FOOTER (PIE DE PAGINA)
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .pie-pagina {
   border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil arriba */
-  background-color: rgba(0, 0, 0, 0.3);           /* Fondo oscurecido para dar cierre */
+  background-color: rgba(0, 0, 0, 0.3);           
   padding: 40px 20px 20px;
   margin-top: 80px;                               /* Empuja el footer hacia abajo, separándolo del formulario */
-  color: #94a3b8;                                 /* Un gris/celeste apagado para que no robe atención */
+  color: #94a3b8;                                 
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -620,7 +617,7 @@ FOOTER (PIE DE PAGINA)
 }
 
 .footer-redes a {
-  text-decoration: none; /* Quita el subrayado feo de los enlaces */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
   color: #e2e8f0;
   font-weight: 600;
   font-size: 28px;
@@ -641,12 +638,12 @@ FOOTER (PIE DE PAGINA)
   text-align: center;
   margin-top: 40px;
   font-size: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea extra fina de separación */
+  border-top: 1px solid rgba(255, 255, 255, 0.05); 
   padding-top: 20px;
 }
 
 /* /////////////////////////////////
-CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
+CELULAR (MÓVIL A MEDIDA)
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 @media (max-width: 768px) {
   
@@ -703,7 +700,7 @@ CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
   
   .form-fila {
     flex-direction: column; /* Apilamos "Teléfono" y "País" */
-    gap: 20px; /* Reducimos el hueco de 60px */
+    gap: 20px;
   }
   
   .form-botones {
@@ -711,7 +708,7 @@ CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
   }
   
   .form-botones button {
-    width: 100%; /* Botones anchos para tocar cómodamente con el dedo */
+    width: 100%; /* Botones anchos*/
   }
 
   /* 6. FOOTER */
