@@ -168,9 +168,10 @@ SECCION SOBRE MI
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 #sobre-mi {
     background-image: url("https://i.imgur.com/dQ6CzcM.jpeg");
-    background-position: 30%;
-    background-repeat: no-repeat;
-    background-size: 140%;
+   background-size: cover; 
+    background-position: center; 
+    padding-bottom: 40px;
+    background-position: 25%;
     padding: 0%;
     
 }
@@ -679,6 +680,9 @@ CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
   }
 
   /* 4. SECCIÓN SOBRE MÍ */
+  #sobre-mi{
+    background-position: 50%;
+  }
   .sobre-mi-titulo h2,
   .sobre-mi-texto {
     width: 100%; /* Forzamos a que usen todo el ancho de la pantalla */
