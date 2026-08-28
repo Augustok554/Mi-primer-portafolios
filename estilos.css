@@ -675,8 +675,8 @@ CELULAR (OPTIMIZACIÓN MÓVIL A MEDIDA)
 
   /* 3. SECCIÓN BIENVENIDA */
   #bienvenida {
-    font-size: 40px; /* Letra más adaptable al móvil */
-    padding: 100px 20px; /* Reducimos el padding gigante de 200px */
+    font-size: 28px; /* Letra más adaptable al móvil */
+    padding: 100px 20px; /* Reducimos el padding */
   }
 
   /* 4. SECCIÓN SOBRE MÍ */
