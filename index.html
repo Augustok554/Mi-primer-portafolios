@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Mi portafolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -199,7 +200,7 @@
 
                 <div class="proyecto-info">
                     <h3><span class="subray-h3">Mi primer página</span></h3>
-                    <img src="https://i.imgur.com/yGj2key.jpeg" alt="Mi primer página" class="proyecto-img-interna">
+                    <img src="https://i.imgur.com/KxVLcWs.jpeg" alt="Mi primer página" class="proyecto-img-interna">
                     <div class="etiquetas">
                         <span>HTML5</span>
                     </div>
@@ -209,27 +210,32 @@
                         Además de ser mi inspiración para crear este portafolios
                     </p>
                     <div class="botones">
-                        <a href="#" class="btn-primario">Ver Código</a>
+                        <a href="https://github.com/Augustok554/mi-primer-pagina" target="_blank" class="btn-primario">Ver Código</a>
                     </div>
                 </div>
                 </p>
             </div>
 
             <div class="proyecto-card">
-            <div class="proyecto-info">
-                <h3><span class="subray-h3">Este Portafolio</span></h3>
-                <img src="https://i.imgur.com/yGj2key.jpeg" alt="Vista previa del Portafolio" class="proyecto-img-interna">
-                <div class="etiquetas">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
+                <div class="proyecto-info">
+                    <h3><span class="subray-h3">Este Portafolio</span></h3>
+                    <img src="https://i.imgur.com/8UCBY70.jpeg" alt="Vista previa del Portafolio"
+                        class="proyecto-img-interna">
+                    <div class="etiquetas">
+                        <div class="etiquetas">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <p>El sitio que estás viendo suma etiquetas semánticas de HTML5, además de CSS, JavaScript, entre
+                        otras
+                        cosas.
+                    </p>
+                    <div class="botones">
+                        <a href="https://github.com/Augustok554/Mi-primer-portafolios" target="_blank" class="btn-primario">Ver Código</a>
+                    </div>
                 </div>
-                <p>El sitio que estás viendo suma etiquetas semánticas de HTML5, además de CSS, JavaScript, entre otras
-                    cosas.
-                </p>
-                <div class="botones">
-                    <a href="#" class="btn-primario">Ver Código</a>
-                </div>
-            </div>
 
 
         </section>
@@ -239,7 +245,7 @@
             <p class="descripcion-seccion">Para un contacto más ameno, te invito a completar el siguiente formulario.
             </p>
 
-            <form action="" method="post" class="formulario-cristal">
+            <form action="" method="post" class="formulario-cristal" id="mi-formulario">
 
                 <fieldset>
                     <legend>Tus datos</legend>
@@ -248,21 +254,18 @@
 
                     <div class="form-grupo">
                         <label for="nombre">Nombre: <span aria-hidden="true">*</span></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="name"
-                            required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
                     </div>
 
                     <div class="form-grupo">
                         <label for="email">Correo electrónico: <span aria-hidden="true">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="Ej: ejemplo@gmail.com"
-                            autocomplete="email" required>
+                        <input type="email" id="email" name="email" placeholder="Ej: ejemplo@gmail.com" required>
                     </div>
 
                     <div class="form-fila">
                         <div class="form-grupo">
                             <label for="telefono">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" autocomplete="tel"
-                                placeholder="+54 387 63.....">
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 387 63.....">
                         </div>
                         <div class="form-grupo">
                             <label for="pais">País:</label>
@@ -331,16 +334,13 @@
 
             <ul class="footer-redes">
                 <li>
-                    <a href="..." aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/Augustok554" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 </li>
                 <li>
-                    <a href="..." aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/nieto-bruno-augusto-132169399/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <a href="..." aria-label="Correo electrónico"><i class="fa-solid fa-envelope"></i></a>
-                </li>
-                <li>
-                    <a href="..." aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/augustobn.priv/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </li>
             </ul>
 
@@ -350,6 +350,8 @@
             <p>&copy; 2026 Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
